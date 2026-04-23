@@ -1,0 +1,6 @@
+{
+  "name": "PCB.ai",
+  "description": "Professional Text-to-PCB Design Automation. Generate professional BOM, Netlist, and 3D PCB layouts from natural language requirements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

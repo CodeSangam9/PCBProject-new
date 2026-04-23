@@ -1,0 +1,46 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "App user with role",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "startup", "admin"] },
+        "displayName": { "type": "string" }
+      },
+      "required": ["uid", "email", "role"]
+    },
+    "Project": {
+      "title": "PCB Project",
+      "description": "PCB design project and its lifecycle",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "status": { "type": "string" },
+        "pipelineStep": { "type": "integer" },
+        "parameters": { "type": "object" },
+        "bom": { "type": "array" },
+        "netlist": { "type": "array" },
+        "layout": { "type": "object" },
+        "drc": { "type": "array" },
+        "createdAt": { "type": "integer" }
+      },
+      "required": ["id", "userId", "title", "status"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "User profiles"
+    },
+    "/projects/{projectId}": {
+      "schema": "Project",
+      "description": "PCB Projects"
+    }
+  }
+}
