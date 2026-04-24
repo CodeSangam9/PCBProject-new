@@ -41,7 +41,7 @@ async function callOpenRouter(promptText: string, systemInstruction: string, pre
 }
 
 export async function parsePCBRequirements(prompt: string, parameters: PCBParameters) {
-  const model = "gemini-3.1-pro-preview";
+  const model = "gemini-2.0-flash";
   
   const systemInstruction = `You are a high-performance PCB Engineering Intelligence. 
   Your mission is to synthesize professional, electrically-sound, and manufacturing-ready PCB architectural designs from natural language descriptions.
